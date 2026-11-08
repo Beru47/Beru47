@@ -77,37 +77,37 @@ The shape of the platform I build and run day to day:
 
 ```mermaid
 flowchart LR
-    subgraph SRC[Sources]
-        K[Kafka events]
-        S3[AWS S3 files]
-        DB[(PostgreSQL / MongoDB)]
+    subgraph src["Sources"]
+        kafka["Kafka events"]
+        s3files["AWS S3 files"]
+        oltp[("PostgreSQL, MongoDB")]
     end
-    subgraph LH[Azure Databricks · Delta Lake · Unity Catalog]
-        B[Bronze<br/>raw, append-only] --> S[Silver<br/>cleaned, conformed] --> G[Gold<br/>business aggregates]
+    subgraph lake["Azure Databricks: Delta Lake + Unity Catalog"]
+        bronze["Bronze: raw, append-only"] --> silver["Silver: cleaned, conformed"] --> gold["Gold: business aggregates"]
     end
-    subgraph SERVE[Serving]
-        SF[Snowflake + dbt<br/>star schema, SCD2]
-        MS[MLflow · Model Serving]
-        API[FastAPI / Django APIs]
-        RAG[RAG · vector DB]
+    subgraph serve["Serving"]
+        snow["Snowflake + dbt: star schema, SCD2"]
+        mlserve["MLflow + Model Serving"]
+        apis["FastAPI and Django APIs"]
+        rag["RAG + vector DB"]
     end
-    K --> B
-    S3 --> B
-    DB --> B
-    G --> SF
-    G --> MS
-    G --> RAG
-    SF --> API
-    AF{{Airflow}} -.orchestrates.-> LH
-    AF -.orchestrates.-> SF
-    OBS{{Prometheus · Grafana}} -.monitors.-> SERVE
+    kafka --> bronze
+    s3files --> bronze
+    oltp --> bronze
+    gold --> snow
+    gold --> mlserve
+    gold --> rag
+    snow --> apis
+    airflow{{"Airflow"}} -. orchestrates .-> bronze
+    airflow -. orchestrates .-> snow
+    obs{{"Prometheus + Grafana"}} -. monitors .-> mlserve
 
-    classDef gold fill:#fbbf24,stroke:#b45309,color:#111;
-    classDef silver fill:#cbd5e1,stroke:#475569,color:#111;
-    classDef bronze fill:#d97706,stroke:#78350f,color:#fff;
-    class G gold;
-    class S silver;
-    class B bronze;
+    classDef goldC fill:#fbbf24,stroke:#b45309,color:#111111
+    classDef silverC fill:#cbd5e1,stroke:#475569,color:#111111
+    classDef bronzeC fill:#d97706,stroke:#78350f,color:#ffffff
+    class gold goldC
+    class silver silverC
+    class bronze bronzeC
 ```
 
 ### Tech stack
