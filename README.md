@@ -201,10 +201,23 @@ flowchart LR
 
 ### Selected work
 
+**Reference implementations.** These are the patterns I use at work, rebuilt in the open on public or synthetic data. Each one is tested and has a passing CI pipeline.
+
 | Project | Stack | What it shows |
 |---|---|---|
-| [**Insurance claims platform**](https://github.com/Beru47/Syst-me-de-gestion-des-sinistres-pour-assurances-non-vie-VERMEG-) · VERMEG | Spring Boot · Kafka · Kubernetes · Elasticsearch · Keycloak | Event-driven microservices for non-life claims: declaration, tracking, indemnification and fraud detection |
-| [**Size prediction API**](https://github.com/Beru47/APi-internship-wefizz) · Welyne | FastAPI · scikit-learn · PostgreSQL · Redis | ML service predicting garment size from body measurements: **+25%** sizing accuracy, **−18%** returns |
+| [**Lakehouse medallion pipeline**](https://github.com/Beru47/lakehouse-medallion-pipeline) <br> ![CI](https://github.com/Beru47/lakehouse-medallion-pipeline/actions/workflows/ci.yml/badge.svg) | PySpark · Delta Lake · dbt · DuckDB · Airflow | Bronze → Silver → Gold with idempotent MERGE upserts, a quarantine table, quality gates, a dbt star schema and SCD Type 2 snapshots |
+| [**Real-time claims streaming**](https://github.com/Beru47/realtime-claims-streaming) <br> ![CI](https://github.com/Beru47/realtime-claims-streaming/actions/workflows/ci.yml/badge.svg) | Kafka · PostgreSQL · FastAPI · Prometheus · Grafana | At-least-once consumer with idempotent upserts, a dead-letter topic, a claim state machine, and integration tests against a real broker |
+| [**MLOps model serving**](https://github.com/Beru47/mlops-model-serving) <br> ![CI](https://github.com/Beru47/mlops-model-serving/actions/workflows/ci.yml/badge.svg) | MLflow · FastAPI · Prometheus · Grafana · Airflow | Model registry with a promotion gate, PSI/KS drift detection, alert rules, and drift-triggered retraining |
+| [**RAG document assistant**](https://github.com/Beru47/rag-document-assistant) <br> ![CI](https://github.com/Beru47/rag-document-assistant/actions/workflows/ci.yml/badge.svg) | LangChain · Chroma · BM25 · OCR · FastAPI | Hybrid retrieval with cited answers, refusal when evidence is missing, and an evaluation harness (hit@k, MRR) |
+| [**Insurance fraud detection**](https://github.com/Beru47/insurance-fraud-detection) <br> ![CI](https://github.com/Beru47/insurance-fraud-detection/actions/workflows/ci.yml/badge.svg) | XGBoost · Random Forest · MLflow · FastAPI · AWS Lambda | Ensemble scoring with a cost-based threshold, Monte Carlo savings simulation, and PR-AUC evaluation |
+
+**Work and internship projects**
+
+| Project | Stack | What it shows |
+|---|---|---|
+| [**Insurance claims platform**](https://github.com/Beru47/Syst-me-de-gestion-des-sinistres-pour-assurances-non-vie-VERMEG-) · VERMEG <br> ![CI](https://github.com/Beru47/Syst-me-de-gestion-des-sinistres-pour-assurances-non-vie-VERMEG-/actions/workflows/ci.yml/badge.svg) | Spring Boot · PostgreSQL · Maven · JUnit | Claims declaration, tracking and indemnification services from my final-year project |
+| [**Garment size prediction API**](https://github.com/Beru47/garment-size-prediction-api) · Welyne <br> ![CI](https://github.com/Beru47/garment-size-prediction-api/actions/workflows/ci.yml/badge.svg) | FastAPI · scikit-learn · PostgreSQL · Docker | ML service predicting garment size from body measurements: **+25%** sizing accuracy, **−18%** returns |
+| [**ETL with Apache NiFi**](https://github.com/Beru47/etl-apache-nifi) | Apache NiFi · Parquet | Flow-based ingestion: Excel source, record transforms, partitioning by industry, Parquet output |
 
 ### How I build
 
