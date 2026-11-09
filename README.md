@@ -209,15 +209,15 @@ flowchart LR
 | [**Real-time claims streaming**](https://github.com/Beru47/realtime-claims-streaming) <br> ![CI](https://github.com/Beru47/realtime-claims-streaming/actions/workflows/ci.yml/badge.svg) | Kafka · PostgreSQL · FastAPI · Prometheus · Grafana | At-least-once consumer with idempotent upserts, a dead-letter topic, a claim state machine, and integration tests against a real broker |
 | [**MLOps model serving**](https://github.com/Beru47/mlops-model-serving) <br> ![CI](https://github.com/Beru47/mlops-model-serving/actions/workflows/ci.yml/badge.svg) | MLflow · FastAPI · Prometheus · Grafana · Airflow | Model registry with a promotion gate, PSI/KS drift detection, alert rules, and drift-triggered retraining |
 | [**RAG document assistant**](https://github.com/Beru47/rag-document-assistant) <br> ![CI](https://github.com/Beru47/rag-document-assistant/actions/workflows/ci.yml/badge.svg) | LangChain · Chroma · BM25 · OCR · FastAPI | Hybrid retrieval with cited answers, refusal when evidence is missing, and an evaluation harness (hit@k, MRR) |
-| [**Insurance fraud detection**](https://github.com/Beru47/insurance-fraud-detection) <br> ![CI](https://github.com/Beru47/insurance-fraud-detection/actions/workflows/ci.yml/badge.svg) | XGBoost · Random Forest · MLflow · FastAPI · AWS Lambda | Ensemble scoring with a cost-based threshold, Monte Carlo savings simulation, and PR-AUC evaluation |
+| [**Insurance fraud detection**](https://github.com/Beru47/insurance-fraud-detection) <br> ![CI](https://github.com/Beru47/insurance-fraud-detection/actions/workflows/ci.yml/badge.svg) | XGBoost · Random Forest · MLflow · FastAPI · Lambda handler | Ensemble scoring with a cost-based threshold, Monte Carlo savings simulation, and PR-AUC evaluation |
 
 **Work and internship projects**
 
 | Project | Stack | What it shows |
 |---|---|---|
-| [**Insurance claims platform**](https://github.com/Beru47/insurance-claims-platform) · VERMEG <br> ![CI](https://github.com/Beru47/insurance-claims-platform/actions/workflows/ci.yml/badge.svg) | Spring Boot · PostgreSQL · Maven · JUnit | Claims declaration, tracking and indemnification services from my final-year project |
-| [**Garment size prediction API**](https://github.com/Beru47/garment-size-prediction-api) · Welyne <br> ![CI](https://github.com/Beru47/garment-size-prediction-api/actions/workflows/ci.yml/badge.svg) | FastAPI · scikit-learn · PostgreSQL · Docker | ML service predicting garment size from body measurements: **+25%** sizing accuracy, **−18%** returns |
-| [**ETL with Apache NiFi**](https://github.com/Beru47/etl-apache-nifi) | Apache NiFi · Parquet | Flow-based ingestion: Excel source, record transforms, partitioning by industry, Parquet output |
+| [**Insurance claims platform**](https://github.com/Beru47/insurance-claims-platform) · VERMEG <br> ![CI](https://github.com/Beru47/insurance-claims-platform/actions/workflows/ci.yml/badge.svg) | Spring Boot · Spring Security (JWT) · PostgreSQL · JUnit | Claim declaration, priority scoring, expert assignment and indemnification, from my final-year project |
+| [**Garment size prediction API**](https://github.com/Beru47/garment-size-prediction-api) · Welyne <br> ![CI](https://github.com/Beru47/garment-size-prediction-api/actions/workflows/ci.yml/badge.svg) | FastAPI · scikit-learn · PostgreSQL · Docker | ML service predicting body measurements from height, weight and morphology to drive garment sizing: **+25%** sizing accuracy, **−18%** returns |
+| [**ETL with Apache NiFi**](https://github.com/Beru47/etl-apache-nifi) | Apache NiFi · Parquet | University lab: file ingestion, record enrichment, CSV → Parquet conversion and partitioning by industry |
 
 ### How I build
 
