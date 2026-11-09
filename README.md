@@ -215,7 +215,7 @@ flowchart LR
 
 | Project | Stack | What it shows |
 |---|---|---|
-| [**Insurance claims platform**](https://github.com/Beru47/Syst-me-de-gestion-des-sinistres-pour-assurances-non-vie-VERMEG-) · VERMEG <br> ![CI](https://github.com/Beru47/Syst-me-de-gestion-des-sinistres-pour-assurances-non-vie-VERMEG-/actions/workflows/ci.yml/badge.svg) | Spring Boot · PostgreSQL · Maven · JUnit | Claims declaration, tracking and indemnification services from my final-year project |
+| [**Insurance claims platform**](https://github.com/Beru47/insurance-claims-platform) · VERMEG <br> ![CI](https://github.com/Beru47/insurance-claims-platform/actions/workflows/ci.yml/badge.svg) | Spring Boot · PostgreSQL · Maven · JUnit | Claims declaration, tracking and indemnification services from my final-year project |
 | [**Garment size prediction API**](https://github.com/Beru47/garment-size-prediction-api) · Welyne <br> ![CI](https://github.com/Beru47/garment-size-prediction-api/actions/workflows/ci.yml/badge.svg) | FastAPI · scikit-learn · PostgreSQL · Docker | ML service predicting garment size from body measurements: **+25%** sizing accuracy, **−18%** returns |
 | [**ETL with Apache NiFi**](https://github.com/Beru47/etl-apache-nifi) | Apache NiFi · Parquet | Flow-based ingestion: Excel source, record transforms, partitioning by industry, Parquet output |
 
